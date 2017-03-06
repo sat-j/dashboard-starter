@@ -1,0 +1,57 @@
+<ion-view view-title="Dashboard">
+    <ion-content>
+
+        <div class="dashboard-main-container animated bounceInDown dashboard-main-container-chart">
+
+            <ion-slide-box on-slide-changed="slideHasChanged($index)">
+
+                <ion-slide>
+                    <div class="card chart-card">
+                        <div class="item item-text-wrap chart-box">
+                            <canvas id="bar" class="chart chart-bar" chart-data="barData" chart-labels="barLabels" chart-series="barSeries" chart-options="options">
+                                    </canvas>
+                        </div>
+
+                        </div>
+                </ion-slide>
+
+
+                <ion-slide>
+                    <div class="card chart-card">
+
+                        <div class="item item-text-wrap">
+                            <canvas style="height: 100%;" id="doughnut" chart-data="doughnutData" chart-labels="doughnutLabels" class="chart chart-doughnut" chart-legend="true" chart-series="Execution Status" chart-options="{showTooltips: false}">
+                            </canvas>
+                        </div>
+                    </div>
+                </ion-slide>
+
+                <ion-slide>
+                    <div class="card chart-card">
+
+                        <div class="item item-text-wrap">
+                            <canvas id="pie" class="chart chart-pie"
+  chart-data="pieData" chart-labels="pieLabels" chart-options="pieOptions">
+</canvas> 
+                        </div>
+                    </div>
+                </ion-slide>
+
+            </ion-slide-box>
+
+            </div>
+
+            <!--
+        <div class="card chart-card">
+            <div class="item item-text-wrap">
+                <canvas id="line" class="chart chart-line" data="lineData" labels="lineLabels" legend="true" series="lineSeries" options="{showTooltips: false}"></canvas>
+            </div>
+            <div class="item item-text-wrap">
+                <canvas id="doughnut" data="pieData" labels="pieLabels" class="chart chart-doughnut" legend="true" series="series" options="{showTooltips: false}">
+                </canvas>
+            </div>
+        </div>
+-->
+
+    </ion-content>
+</ion-view>
