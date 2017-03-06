@@ -19,8 +19,8 @@
                 <ion-slide>
                     <div class="card chart-card">
 
-                        <div class="item item-text-wrap">
-                            <canvas style="height: 100%;" id="doughnut" chart-data="doughnutData" chart-labels="doughnutLabels" class="chart chart-doughnut" chart-legend="true" chart-series="Execution Status" chart-options="{showTooltips: false}">
+                        <div class="item item-text-wrap chart-box">
+                            <canvas id="doughnut" chart-data="doughnutData" chart-labels="doughnutLabels" class="chart chart-doughnut" chart-legend="true"  chart-options="doughnutOptions">
                             </canvas>
                         </div>
                     </div>
@@ -29,9 +29,9 @@
                 <ion-slide>
                     <div class="card chart-card">
 
-                        <div class="item item-text-wrap">
+                        <div class="item item-text-wrap chart-box">
                             <canvas id="pie" class="chart chart-pie"
-  chart-data="pieData" chart-labels="pieLabels" chart-options="pieOptions">
+  chart-data="pieData" chart-labels="pieLabels" chart-legend="true" chart-options="pieOptions">
 </canvas> 
                         </div>
                     </div>

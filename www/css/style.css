@@ -3,6 +3,10 @@
     height: 100%;
 }
 
+.chart-box{
+        height: 80vh;
+}
+
 /*
 .slider, .chart-card {
     height: 100%;
