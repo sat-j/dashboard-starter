@@ -2,6 +2,9 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function ($scope) {
 
+    Chart.defaults.global.defaultFontColor = '#666';
+ 
+
 
     // --------------------- Doughnut Chart Configuration -----------------------------
     $scope.doughnutLabels = ["No Run", "Blocked", "Passed", "Failed"];
@@ -23,6 +26,19 @@ angular.module('starter.controllers', [])
     // --------------------- Line Chart Configuration ----------------------------
 
     $scope.barLabels = ["this is name of long project", "short name", "this is a medium sized name", "this is name of long project", "this is name of long project", "Short Name", "this is name of long project"];
+    for (i = 0; i < $scope.barLabels.length; i++) {
+        console.log(i)
+    }
+    $scope.colours = [
+        { // Red                    
+            fillColor: 'rgba(168,0,0,0.6)',
+            strokeColor: 'rgba(96,0,0,1)',
+            pointColor: 'rgba(96,0,0,1)',
+            pointStrokeColor: '#fff',
+            pointHighlightFill: '#fff',
+            pointHighlightStroke: 'rgba(96,0,0,0.8)'
+        }]
+
     $scope.options = {
         responsive: true,
         maintainAspectRatio: false,
@@ -46,9 +62,7 @@ angular.module('starter.controllers', [])
         }
     };
 
-
-    $scope.x = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-    $scope.barSeries = ['Executed', 'Pending'];
+    $scope.barSeries = ['Executed'];
 
     $scope.barData = [
     [65, 59, 80, 81, 56, 55, 40]

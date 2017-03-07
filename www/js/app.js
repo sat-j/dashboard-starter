@@ -58,32 +58,32 @@ angular.module('starter', ['ionic', 'chart.js', 'starter.controllers', 'starter.
     }
   })
 
-  .state('tab.chats', {
+  .state('tab.email', {
     url: '/chats',
     views: {
       'tab-chats': {
-        templateUrl: 'templates/tab-chats.html',
+        templateUrl: 'templates/tab-email.html',
         controller: 'ChatsCtrl'
       }
     }
   })
 
 
-  .state('tab.social', {
-    url: '/social',
+  .state('tab.screenshot', {
+    url: '/screenshot',
     views: {
       'tab-social': {
-        templateUrl: 'templates/tab-social.html',
+        templateUrl: 'templates/tab-screenshot.html',
         controller: 'SocialCtrl'
       }
     }
   })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.contact', {
+    url: '/contact',
     views: {
       'tab-account': {
-        templateUrl: 'templates/tab-account.html',
+        templateUrl: 'templates/tab-contact.html',
         controller: 'AccountCtrl'
 
       }
@@ -95,7 +95,11 @@ angular.module('starter', ['ionic', 'chart.js', 'starter.controllers', 'starter.
   $ionicConfigProvider.tabs.position('bottom'); // other values: top
 
 (function (ChartJsProvider) {
-  ChartJsProvider.setOptions({ colors : [ '#e60000', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'] });
+  //ChartJsProvider.setOptions({ colors : [ '#e60000', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'] });
+    
+    ChartJsProvider.setOptions('bar', {
+      showLines: false
+    });
 });     
     
 });
